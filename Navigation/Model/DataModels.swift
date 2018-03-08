@@ -2,10 +2,6 @@
 
 import Foundation
 
-struct Model: Codable  {
-    let car: [Car]
-}
-
 struct Car: Codable {
     let gpsposition: GPSPosition?
 }

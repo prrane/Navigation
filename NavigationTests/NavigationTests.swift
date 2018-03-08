@@ -17,7 +17,7 @@ class NavigationTests: XCTestCase {
     
     func testGetJSONFileURL() {
         do {
-            _ = try DataManager.jsonFileURL()
+            _ = try DataManager.shared.jsonFileURL()
         }
         catch let error {
             XCTFail(error.localizedDescription)
@@ -26,7 +26,7 @@ class NavigationTests: XCTestCase {
     
     func testGetJSONData() {
         do {
-            let jsonData = try DataManager.jsonData(from: DataManager.jsonFileURL())
+            let jsonData = try DataManager.shared.jsonData(from: DataManager.shared.jsonFileURL())
             XCTAssert(!jsonData.isEmpty, "Failed to get JSONData")
         }
         catch let error {
@@ -36,10 +36,10 @@ class NavigationTests: XCTestCase {
     
     func testGetCars() {
         do {
-            let jsonData = try DataManager.jsonData(from: DataManager.jsonFileURL())
+            let jsonData = try DataManager.shared.jsonData(from: DataManager.shared.jsonFileURL())
             XCTAssert(!jsonData.isEmpty, "Failed to get JSONData")
             
-            let cars = try DataManager.fetchCars(from: jsonData)
+            let cars = try DataManager.shared.fetchCars()
             XCTAssert(!cars.isEmpty, "Failed to get cars")
         }
         catch let error {
