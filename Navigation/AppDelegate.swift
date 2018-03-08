@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  Navigation
-//
-//  Created by Prashant Rane on 08/03/18.
-//  Copyright © 2018 Prashant Rane. All rights reserved.
-//
 
 import UIKit
 

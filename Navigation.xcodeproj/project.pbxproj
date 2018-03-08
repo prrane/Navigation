@@ -13,6 +13,9 @@
 		A8DE56152051260300600FBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8DE56142051260300600FBF /* Assets.xcassets */; };
 		A8DE56182051260300600FBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8DE56162051260300600FBF /* LaunchScreen.storyboard */; };
 		A8DE56232051260300600FBF /* NavigationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DE56222051260300600FBF /* NavigationTests.swift */; };
+		A8DE56312051270500600FBF /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DE56302051270500600FBF /* DataManager.swift */; };
+		A8DE56332051295C00600FBF /* vehicles.json in Resources */ = {isa = PBXBuildFile; fileRef = A8DE56322051295C00600FBF /* vehicles.json */; };
+		A8DE56342051295C00600FBF /* vehicles.json in Resources */ = {isa = PBXBuildFile; fileRef = A8DE56322051295C00600FBF /* vehicles.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,8 @@
 		A8DE561E2051260300600FBF /* NavigationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NavigationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8DE56222051260300600FBF /* NavigationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTests.swift; sourceTree = "<group>"; };
 		A8DE56242051260300600FBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8DE56302051270500600FBF /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		A8DE56322051295C00600FBF /* vehicles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = vehicles.json; path = ../../../../Downloads/vehicles.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +82,14 @@
 		A8DE560C2051260300600FBF /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				A8DE562F205126F400600FBF /* Model */,
+				A8DE562E205126DE00600FBF /* MapView */,
 				A8DE560D2051260300600FBF /* AppDelegate.swift */,
-				A8DE560F2051260300600FBF /* ViewController.swift */,
-				A8DE56112051260300600FBF /* Main.storyboard */,
 				A8DE56142051260300600FBF /* Assets.xcassets */,
+				A8DE56112051260300600FBF /* Main.storyboard */,
 				A8DE56162051260300600FBF /* LaunchScreen.storyboard */,
 				A8DE56192051260300600FBF /* Info.plist */,
+				A8DE56322051295C00600FBF /* vehicles.json */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -94,6 +101,22 @@
 				A8DE56242051260300600FBF /* Info.plist */,
 			);
 			path = NavigationTests;
+			sourceTree = "<group>";
+		};
+		A8DE562E205126DE00600FBF /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				A8DE560F2051260300600FBF /* ViewController.swift */,
+			);
+			path = MapView;
+			sourceTree = "<group>";
+		};
+		A8DE562F205126F400600FBF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A8DE56302051270500600FBF /* DataManager.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +202,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8DE56332051295C00600FBF /* vehicles.json in Resources */,
 				A8DE56182051260300600FBF /* LaunchScreen.storyboard in Resources */,
 				A8DE56152051260300600FBF /* Assets.xcassets in Resources */,
 				A8DE56132051260300600FBF /* Main.storyboard in Resources */,
@@ -189,6 +213,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8DE56342051295C00600FBF /* vehicles.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8DE56102051260300600FBF /* ViewController.swift in Sources */,
+				A8DE56312051270500600FBF /* DataManager.swift in Sources */,
 				A8DE560E2051260300600FBF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,11 +382,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R2ZL7S7Z67;
 				INFOPLIST_FILE = Navigation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prrane.Navigation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -371,11 +398,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R2ZL7S7Z67;
 				INFOPLIST_FILE = Navigation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prrane.Navigation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

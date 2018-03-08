@@ -1,10 +1,4 @@
-//
-//  NavigationTests.swift
-//  NavigationTests
-//
-//  Created by Prashant Rane on 08/03/18.
-//  Copyright © 2018 Prashant Rane. All rights reserved.
-//
+
 
 import XCTest
 @testable import Navigation
@@ -21,9 +15,23 @@ class NavigationTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testGetJSONFileURL() {
+        do {
+            _ = try DataManager.jsonFileURL()
+        }
+        catch let error {
+            XCTFail(error.localizedDescription)
+        }
+    }
+    
+    func testGetJSONData() {
+        do {
+            let jsonData = try DataManager.jsonData(from: DataManager.jsonFileURL())
+            XCTAssert(!jsonData.isEmpty, "Failed to get JSONData")
+        }
+        catch let error {
+            XCTFail(error.localizedDescription)
+        }
     }
     
     func testPerformanceExample() {
