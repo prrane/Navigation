@@ -16,6 +16,8 @@
 		A8DE56312051270500600FBF /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DE56302051270500600FBF /* DataManager.swift */; };
 		A8DE56332051295C00600FBF /* vehicles.json in Resources */ = {isa = PBXBuildFile; fileRef = A8DE56322051295C00600FBF /* vehicles.json */; };
 		A8DE56342051295C00600FBF /* vehicles.json in Resources */ = {isa = PBXBuildFile; fileRef = A8DE56322051295C00600FBF /* vehicles.json */; };
+		A8DE563620512E8D00600FBF /* DataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DE563520512E8D00600FBF /* DataModels.swift */; };
+		A8DE563720512E8D00600FBF /* DataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DE563520512E8D00600FBF /* DataModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,7 @@
 		A8DE56242051260300600FBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8DE56302051270500600FBF /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		A8DE56322051295C00600FBF /* vehicles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = vehicles.json; path = ../../../../Downloads/vehicles.json; sourceTree = "<group>"; };
+		A8DE563520512E8D00600FBF /* DataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				A8DE56302051270500600FBF /* DataManager.swift */,
+				A8DE563520512E8D00600FBF /* DataModels.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -227,6 +231,7 @@
 				A8DE56102051260300600FBF /* ViewController.swift in Sources */,
 				A8DE56312051270500600FBF /* DataManager.swift in Sources */,
 				A8DE560E2051260300600FBF /* AppDelegate.swift in Sources */,
+				A8DE563620512E8D00600FBF /* DataModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8DE56232051260300600FBF /* NavigationTests.swift in Sources */,
+				A8DE563720512E8D00600FBF /* DataModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -34,10 +34,16 @@ class NavigationTests: XCTestCase {
         }
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testGetCars() {
+        do {
+            let jsonData = try DataManager.jsonData(from: DataManager.jsonFileURL())
+            XCTAssert(!jsonData.isEmpty, "Failed to get JSONData")
+            
+            let cars = try DataManager.fetchCars(from: jsonData)
+            XCTAssert(!cars.isEmpty, "Failed to get cars")
+        }
+        catch let error {
+            XCTFail(error.localizedDescription)
         }
     }
     
